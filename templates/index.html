@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/23f12ed3cb.js" crossorigin="anonymous"></script>
+    <script src="/static/js/app.js"></script>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="container">
+            <h1 class="fa-solid fa-circle-user"></h1>
+            <h1>Welcome User</h1>
+            <h5 id="time">time displays</h5>
+        </div>
+    </header>
+    <h4>Please Fill the below details Approprietly</h4>
+    <form action="/predict" method="post">
+        <div>Age: <input type="text" name="Age" id="age" placeholder="Enter your Age" required></div>
+        <div>Gender: <select name="Sex" id="gender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="T">Prefer not to say</option>
+        </select></div><br>
+        <div>Chest pain Type: <select name="ChestPainType" id="paintype">
+            <option value="null" selected disabled>&nbsp; Enter type of pain &nbsp;</option>
+            <option value="ASY">Asymptomatic</option>
+            <option value="ATA">Atypical Angina</option>
+            <option value="NAP">Non-Anginal Pain</option>
+            <option value="TA">Typical Angina</option>
+        </select></div>
+        <div>Resting BP: <input type="number" name="RestingBP" id="bp" placeholder="Enter BP" required></div>
+        <div>Cholestrol: <input type="number" name="Cholesterol" id="ch" placeholder="Enter Cholestrol Level" required></div>
+        <div>Fasting BS: <input type="number" name="FastingBS" id="bs" placeholder="Enter BS level" required></div>
+        <div>Resting ECG: <select name="RestingECG" id="ecg" required>
+            <option value="null" selected disabled>&nbsp; Enter ECG levels &nbsp;</option>
+            <option value="LVH">LVH</option>
+            <option value="Normal">Normal</option>
+            <option value="ST">ST</option>
+        </select></div>
+        <div>Max HR: <input type="number" name="MaxHR" id="hr" placeholder="Enter HR Level" required></div>
+        <div>Exercise Angina: <select name="ExerciseAngina" id="angina" required>
+            <option value="null" selected disabled>&nbsp; select the eXercise &nbsp;</option>
+            <option value="N">No</option>
+            <option value="Y">Yes</option>
+        </select></div>
+        <div>Oldpeak: <input type="number" name="Oldpeak" id="peak" placeholder="Enter oldpeak" required></div>
+        <div>ST slope: <select name="ST_Slope" id="st" required>
+            <option value="null" selected disabled>&nbsp; select the slope &nbsp;</option>
+            <option value="Down">Down</option>
+            <option value="Flat">Flat</option>
+            <option value="UP">UP</option>
+        </select></div><br>
+        <div><button class="btn btn-primary btn-lg" value="predict">Submit</button></div>
+    </form>
+    <div id="result">{{ prediction_texts }}</div>
+    <footer>
+        <div class="socials">
+            <b><i class="fa-solid fa-heart-circle-check"></i> Have a safe Heart with us</b>
+            <h2>
+                <a href="https://www.instagram.com/mr.bobby._/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </h2>
+        </div>
+        <p><i class="fa fa-copyright"><span style="color: #FE251B;"> people's company</span> private limited </i></p>
+    </footer>
+
+</body>
+</html>

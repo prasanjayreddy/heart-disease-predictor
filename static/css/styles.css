@@ -1,0 +1,121 @@
+body{background: linear-gradient(to bottom right,black,red);background-repeat: no-repeat;}
+
+header{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+header div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 400px) {
+    #time{
+        display: none;
+    }
+}
+
+h4{
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+form{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    align-content: space-between;
+    flex-flow: row wrap;
+    row-gap: 3rem;
+    color: white;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: 2px solid rgb(0, 145, 230);
+    border-radius: 8px;
+}
+form div{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+form div input,select{
+    text-align: center;
+    border: 2px solid #090807;
+}
+
+#result{
+    color: white;
+    text-align: center;
+    font-size: 200%;
+    width: 50%;
+    height: 4rem;
+    background-color: #090807;
+    padding: auto;
+    margin: auto;
+    border-radius: 4px;
+}
+@media screen and (max-width: 400px){
+    #result{
+        font-size: 1rem;
+        padding-top: 5%;
+        padding-bottom: 10%;
+
+    }
+}
+
+footer{
+    width: 100%;
+    background-color: #090807;
+    color: #fcfcfc;
+    margin-top: 6rem;
+    margin-bottom: 0;
+    padding: 0 4rem;
+ }
+ footer a{
+     color: #fcfcfc;
+ }
+ footer .fa{
+     padding: 1rem .5rem;
+ }
+ footer .fab{
+     padding: 1rem .5rem;
+ }
+ .socials{
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     padding: 2rem 1rem 4rem;
+ }
+ .socials b{
+     font-size: 2rem;
+     font-weight: 200;
+ }
+ @media screen and (max-width: 400px){
+    .socials b{
+        font-size: 1.1rem;
+        font-weight: 200;
+    }
+    footer .fa,.fab{
+        font-size: 1rem;
+    }
+ }
+ footer p{
+     text-align-last: center;
+     font-size: 1.5rem;
+     padding-bottom: 3rem;
+ }
+ .fa-heart-circle-check{color: #FE251B;}
+ .fa-instagram:hover{color: rgb(255, 0, 179);}
+ .fa-twitter:hover{color: rgb(0, 140, 255);}
+ .fa-linkedin:hover{color: rgb(76, 0, 255);}
+ .fa-youtube:hover{color: rgb(255, 0, 0);}
